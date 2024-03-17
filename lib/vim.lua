@@ -283,8 +283,9 @@ function VimMode:enter()
   if self.enabled then
     self:collapseSelection()
 
-    hs.timer.doAfter(3 / 1000, function()
+    hs.timer.doAfter(1 / 1000, function()
       self.state:enterNormal()
+      hs.console.clearConsole()
     end)
   end
 end
